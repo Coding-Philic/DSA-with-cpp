@@ -3,9 +3,10 @@
 using namespace std;
 
 int main() {
-    char str[] = {'a','b','c','\0'};
+    char str[100];
+    cout << "Enter a string: "; 
+   cin.getline(str, 100); // read a string with spaces
    
-   
-    cout << strlen(str) << endl;
+    cout << str << endl; // constant pointers
     return 0;
 }
