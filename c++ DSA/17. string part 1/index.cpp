@@ -3,9 +3,10 @@
 using namespace std;
 
 int main() {
-  string str1 = "hi this is adnan khan";
-  string str2 = "alsdkflsdjjflasjdf fdsajf lsdf";
-  string str3 = str1+str2;
-  cout << str3 << endl;
+ string str3;
+//  cin >> str3;// we are not able to input whole sentences because when we get space there is a function who stop to input string only we get value before the space
+ // thats why we use this funceion;
+ getline(cin, str3);//getline is the function who input whole string
+  cout << str3.length() << endl;
     return 0;
 }
