@@ -3,12 +3,9 @@
 using namespace std;
 
 int main() {
-    char str[6];
-    cout << "Enter a string: "; 
-   cin.getline(str, 6, '$'); // read a string with spaces
-   for(char ch : str){
-    cout << ch << " ";
-   }
-    cout << str << endl; // constant pointers
+  string str1 = "hi this is adnan khan";
+  string str2 = "alsdkflsdjjflasjdf fdsajf lsdf";
+  string str3 = str1+str2;
+  cout << str3 << endl;
     return 0;
 }
