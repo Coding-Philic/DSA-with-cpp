@@ -8,15 +8,23 @@ int gcd(int a , int b){
         }else if (b>a)
         {
            b = b%a;
-        }else{
-            cout << a << endl;
-            return 0;
+        }else{   
+            return a;
         }
          }
-    cout << max(a,b) << endl;
-    return 0;
+    int hcf = max(a,b);
+    return hcf;
+}
+
+int lcm(int a , int b, int gcd){
+   int lcm = a*b /gcd;
+   return lcm;
 }
 int main() {
     int a = 2, b= 3;
-   gcd(a,b);
+   int hcf = gcd(a,b);
+   int locm = lcm(a,b,hcf);
+
+   cout << "the HCF or GCD of numbers is : " << hcf << endl;
+   cout << "the LCM of numbers is : " << locm << endl;
 }
