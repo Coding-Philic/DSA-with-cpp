@@ -13,8 +13,20 @@ void printnum(int n ){
     printnum(n-1); // function ko n-1 ke saath recursively call karo
 }
 
+// fact function ka kaam hai kisi number ka factorial calculate karna
+// Agar n == 0 ho jata hai, to base case trigger hota hai aur 1 return hota hai
+// Har call ke baad n ko uske factorial ke liye recursively multiply kiya jata hai
+int fact(int n){
+    if(n == 0){ // Base case: jab n 0 ho jaye, factorial 1 hota hai
+        return 1; // 0! = 1
+    }
+    return n * fact(n-1); // n ko uske factorial ke liye recursively multiply karo
+}
+
 int main(){
-    int n = 1000; // n ko initialize kiya 1000 ke saath
-    printnum(n); // printnum function ko call kiya jo 1000 se 1 tak ke numbers ko print karega
+    int n = 4; // n ko initialize kiya 4 ke saath
+    printnum(n); // printnum function ko call kiya jo 4 se 1 tak ke numbers ko print karega
+    cout << endl; // ek new line ke liye
+    cout << fact(5) << endl; // fact function ko call kiya jo 5 ka factorial calculate karega aur print karega
     return 0; // program successfully terminate karega
 }
