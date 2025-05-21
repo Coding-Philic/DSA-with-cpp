@@ -2,6 +2,8 @@
 #include <vector>
 #include <list>
 #include <deque>
+#include <stack>
+#include <queue>
 
 using namespace std;
 
@@ -99,5 +101,44 @@ int main() {
 
 
     /*non sequential container*/
+
+    /*?STACK..................................?*/
+
+    // stack<int> s;
+    // stack<int> s2;
+
+    // s.push(1);
+    // s.push(2);
+    // s.push(3);
+    // s.push(6);
+    // s2.swap(s);
+    // while(!s.empty()){
+    //     cout << s.top() << " ";
+    //     s.pop();
+    // }
+    // cout << s.size();
+
+    // queue<int> q;
+
+
+    // q.push(1);
+    // q.push(2);
+    // q.push(3);
+    // q.push(6);
+    
+    // while(!q.empty()){
+    //     cout << q.front() << " ";
+    //     q.pop();
+    // }
+    // cout << q.size();
+
+    /*priority_queue..................................*/
+    // Priority Queue ek aisa container hai jo elements ko sorted order mein rakhta hai (default: descending order).
+    // Iska use tab hota hai jab hume maximum ya minimum element ko fast access karna ho.
+    // Real-life analogy: Ek line jisme sabse important kaam (priority) wale log sabse pehle serve hote hain.
+
+              
+    // Output: 1 3 4 6 10 12
+   
     return 0;
 }

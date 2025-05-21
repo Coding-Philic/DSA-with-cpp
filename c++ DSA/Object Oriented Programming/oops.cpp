@@ -1,37 +1,34 @@
-#include <iostream>
-#include <string>
-using namespace std;
+  #include <iostream>
+  using namespace std;
 
-class Teacher {
-    // Properties / attributes
-    private: 
-        double salary;
+  class student{
+public:
+string name;
+double* cgpaptr;
 
-    public:
-    string name;
-    string dep;
-    string subject;
-
-    Teacher() {
-        dep = "cse";
-    }
-
-    Teacher(string name, string dep, string subject, double salary){
-        this->name = name;
-        this->dep = dep;
-        this->subject = subject;
-        this->salary = salary;
-    }
-
-    void getinfo(){
-        cout << "name : " << name << endl;
-        cout << "subject : " << subject << endl;
-    } 
-};
-
-int main() {
-    cout << "heheh " << endl;
-    Teacher t1("Adnan", "cse", "c++", 250000);
-    t1.getinfo();
-    return 0;
+student(string name, double cgpa){
+    this->name = name;
+    cgpaptr = new double;
+    *cgpaptr = cgpa;
 }
+
+student(student &obj){
+    this->name = obj.name;
+    cgpaptr = new double;
+    *cgpaptr = *obj.cgpaptr;
+}
+
+void getinfo(){
+    cout << "name = " << name << endl;
+    cout << "cgpa = " << *cgpaptr << endl;
+}
+  };
+
+  int main(){
+student s1("adnan", 9.0);
+s1.getinfo();
+student s2(s1);
+s2.name = "chandan";
+*(s2.cgpaptr)= 8.1;
+s2.getinfo();
+  }

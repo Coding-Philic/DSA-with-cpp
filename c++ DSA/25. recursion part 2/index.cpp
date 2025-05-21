@@ -15,7 +15,7 @@ int soted(vector<int>arr,int n, int i ){
     }
 int main() {
     // Write C++ code here
-     vector<int>arr = {2,4,5,16,300,155,1000};
+     vector<int>arr = {2,4,5,16,70,155,1000};
 int n = arr.size();
 cout << soted(arr,n,1);
     return 0;
