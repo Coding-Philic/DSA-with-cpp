@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    vector <int> arr = {3,1,0,8,6};
+    vector <int> arr = {3,1,0,8,7};
     int n = arr.size();
     vector <int> ans(n,0);
     stack <int> s;
