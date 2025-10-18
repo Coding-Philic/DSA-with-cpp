@@ -9,6 +9,7 @@ int main(){
 
     cout << ptr2 << endl;
     cout << &ptr << endl;
+    cout << *ptr << endl;
 
     // float pi = 3.14;
     // float *prt1 = &pi;
