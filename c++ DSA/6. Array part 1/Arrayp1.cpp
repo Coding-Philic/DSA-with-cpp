@@ -27,16 +27,24 @@ int main(){
 
     // input array
 
-    int arr[5];
+    // int arr[5];
 
-    for(int i = 0; i <sizeof(arr)/sizeof(int); i++){
-        cin >> arr[i];
-        cout << endl;
-    }
-    for(int i = 0; i <sizeof(arr)/sizeof(int); i++){
-        cout << "student " <<  i << " marks = " <<arr[i] << endl;
-    }
+    // for(int i = 0; i <sizeof(arr)/sizeof(int); i++){
+    //     cin >> arr[i];
+    //     cout << endl;
+    // }
+    // for(int i = 0; i <sizeof(arr)/sizeof(int); i++){
+    //     cout << "student " <<  i << " marks = " <<arr[i] << endl;
+    // }
     
+    int arr[] = {5,4,3,9,2};
+    int max= arr[0];
+    for(int i = 0; i < sizeof(arr) / sizeof(int); i++){
+        if(max<arr[i]){
+            max = arr[i];
+        }
+    }
+    cout << max << endl;
 
     return 0;
 }
