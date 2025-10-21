@@ -37,14 +37,22 @@ int main(){
     //     cout << "student " <<  i << " marks = " <<arr[i] << endl;
     // }
     
-    int arr[] = {5,4,3,9,2};
-    int max= arr[0];
-    for(int i = 0; i < sizeof(arr) / sizeof(int); i++){
-        if(max<arr[i]){
-            max = arr[i];
-        }
-    }
-    cout << max << endl;
+    // int arr[] = {5,4,3,9,12};
+    // int max= arr[0];
+    // for(int i = 0; i < sizeof(arr) / sizeof(int); i++){
+    //     if(max<arr[i]){
+    //         max = arr[i];
+    //     }
+    // }
+    // cout << max << endl;
+// int a = 6;
+// int *ptr = &a;
+// cout << ptr << endl;
+
+int arr[] = {1,2,3,4,5,6};
+cout << *arr+1 << endl;
+
+
 
     return 0;
 }
