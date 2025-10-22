@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int LS(int arr[], int size, int targ){
+int LS(int *arr, int size, int targ){
 
     for (int i = 0; i < size; i++)
     {
@@ -12,7 +12,7 @@ int LS(int arr[], int size, int targ){
         }
     }
    cout << "nahi mila " << endl;
-   return 0;  
+   return -1;  
 }
 
 int main(){
