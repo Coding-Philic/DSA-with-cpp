@@ -1,11 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-
-    int arr[] = {1,2,3,4,5};
-    int n = sizeof(arr)/ sizeof(int);
-
+int printSubarray(int *arr, int n){
+    
     for (int i = 0; i < n; i++)
     {
         for (int j = i; j < n; j++)
@@ -20,6 +17,13 @@ int main(){
         
     }
     
+}
+ 
+int main(){
 
+    int arr[] = {1,2,3,4,5};
+    int n = sizeof(arr)/ sizeof(int);
+
+printSubarray(arr, n);
     return 0;
 }
