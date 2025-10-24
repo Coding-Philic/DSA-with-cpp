@@ -4,8 +4,8 @@ using namespace std;
 
 void trap(int *arr, int  n){
     int leftMax[20000], rightMax[20000];
-    leftMax[0] = INT32_MIN;
-    rightMax[0] = INT32_MIN;
+    leftMax[0] = arr[0];
+    rightMax[0] = arr[n-1];
     cout << leftMax[0] << ",";
 
     for(int i = 1; i <n; i++){
@@ -18,7 +18,14 @@ void trap(int *arr, int  n){
            cout << rightMax[i] <<"," ;
           }
 
-          int waterTraped
+          int waterTraped = 0;
+          for(int i =0; i <n; i++){
+            int currWater = min(leftMax[i], rightMax[i]-arr[i]);
+            if(currWater > 0) {
+                waterTraped+=currWater;
+            }
+          }
+          cout << waterTraped << endl;
 
 }
 
