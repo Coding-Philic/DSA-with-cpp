@@ -8,7 +8,7 @@ using namespace std;
 // the largest element among the remaining unsorted items "bubbles" to its
 // correct position at the end of the array.
 //
-// Time complexity: O(n^2) in the worst and average case.
+// Time complexity: O(n^2) in the worst and average case.  
 // Space complexity: O(1) - sorts in place.
 //
 // Parameters:
@@ -21,11 +21,16 @@ void bubble(int *arr, int n){
         // Inner loop: compare each pair of adjacent elements in the
         // unsorted portion [0 .. i]. If the left element is greater,
         // swap them so the bigger value moves right.
+        // bool isSwap = false;
         for(int j = 0; j < i; j++){
             if(arr[j] > arr[j + 1]){
                 // swap the two adjacent elements
                 swap(arr[j], arr[j + 1]);
+                // isSwap = true;
             }
+            // if(!isSwap){
+            //     cout << "Sorted" << endl;
+            // }
         }
     }
 
