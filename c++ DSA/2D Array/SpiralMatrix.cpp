@@ -16,10 +16,16 @@ for(int i = srow+1; i<=erow; i++){
 }
     //buttom
 for(int j = ecol-1; j>=scol; j--){
+    if(srow == erow){
+        break;
+    }
     cout << matrix[erow][j] << " ";
 }
     //left
 for(int i = erow-1; i>=srow+1; i--){
+    if(scol == ecol){
+        break;
+    }
     cout << matrix[i][scol] << " ";
 }
 srow++;scol++;
