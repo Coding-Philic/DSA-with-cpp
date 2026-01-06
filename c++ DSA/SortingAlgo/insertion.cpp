@@ -17,7 +17,7 @@ void insertion(int *arr, int n){
 
 int main(){
     int arr[] = {2,4,2,5,7,2,8};
-    int n = sizeof(arr) / sizeof(int)
+    int n = sizeof(arr) / sizeof(int);
     insertion(arr, n);
 return 0;
 }
