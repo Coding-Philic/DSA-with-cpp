@@ -2,33 +2,21 @@
 using namespace std;
 
 int main(){
-    int marks[5];
 
-
-    cout << sizeof(marks)/sizeof(int) << endl;
-    int l = sizeof(marks)/sizeof(int);
-    for(int i = 0; i < l; i++){
-        cin >> marks[i];
+    int arr[] = {5,4,3,9,2};
+    int end = (sizeof(arr) / sizeof(int))-1;
+    int n = sizeof(arr) / sizeof(int);
+    int st = 0;
+    while(st<end){
+        swap(arr[st], arr[end]);
+        st++;
+        end--;
     }
-    int lar = marks[0];
-    int min = marks[0];
-    int midx = 0;
-    int minidx =0;
-    for(int i = 0; i <l; i++){
-        if(lar < marks[i]){
-            lar = marks[i];
-            midx = i;
-        }
 
-        if(min > marks[i]){
-            min = marks[i];
-            minidx = i;
-        }
-
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << " ";
     }
-    cout  << "maxidx : " << midx << endl;
-    cout << "max value : " << lar << endl;
-    cout << "minidx : " << minidx << endl;
-    cout << "min value : " << min << endl; 
+    
+
     return 0;
 }
