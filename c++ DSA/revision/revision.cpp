@@ -2,19 +2,25 @@
 using namespace std;
 
 int main(){
-int arr[] = {2,-3,6-5,4,2,-1,5};
-int maxsum = 0;
-int tempsum = 0;
+int arr[] = {7,1,5,3,6,7};
 int n = sizeof(arr) / sizeof(int);
-for(int i = 0; i <n; i++){
-  tempsum += arr[i];
-        if(tempsum<0){
-            tempsum = 0;
+int maxprof = 0;
+int currprof = 0;
+int idx1 = 0;
+int idx2 = 0;
+for(int i = 0; i < n; i++){
+    for(int j = i+1; j <n; j++){
+        currprof = arr[j] - arr[i];
+        if(currprof>maxprof){
+            maxprof = max(currprof, maxprof);
+            idx1 = i;
+            idx2 = j;
         }
-        maxsum = max(maxsum,tempsum);
-
-   cout << endl;
+        currprof = 0;
+    }
 }
-cout << "max sum : " << maxsum << endl;
+cout << maxprof << endl;
+cout << "(" << idx1 << "," << idx2 << ")" ;
+
     return 0;
 }
