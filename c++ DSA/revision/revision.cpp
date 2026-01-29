@@ -2,46 +2,32 @@
 using namespace std;
 
 
+int main (){
+int arr[4][4] = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
 
-
-int main(){
-int height[] = {4,2,0,6,3,2,6};
-int n = sizeof(height) / sizeof(int);
-int trap = 0;
-int left[n];
-int right[n];
-int leftmax = 0;
-int rightmax =0; 
-for(int i = 0; i < n; i++){
-if(leftmax< height[i]){
-    leftmax = height[i];
-}
-if(leftmax == height[i]){
-    cout << i << endl;
-}
-left[i] = leftmax;
-}
-left[0] = INT16_MIN;
-for(int i = 0; i < n; i++){
-    cout << left[i] << endl;
-}
-
-
-
-for(int i = n-1; i >= 0; i--){
-if(rightmax< height[i]){
-    rightmax = height[i];
-}
-right[i] = rightmax;
-}
-right[n-1] = INT16_MIN;
-
-for(int i = 1; i < n-1; i++ ){
+int srow = 0;
+int scol = 0;
+int erow = 4-1;
+int ecol = 4-1;
+while((srow<=erow) && (scol < ecol)){
+    for(int i = scol; i <= ecol; i++){
+        cout << arr[srow][i] << " ";
+    }
+    for(int j = srow+1; j <= erow; j++){
+        cout << arr[j][ecol] << " " ;
+    }
+    for(int i = ecol-1; i > scol; i--){
+        cout << arr[erow][i] << " ";
+    }
+    for(int j = erow-1; j>srow+1; j--){
+        cout << arr[j][ecol] << " ";
+    }
+    srow++;
+    scol++;
+    erow--;
+    ecol--;
     
-    int bar = min(right[i], left[i]);
-    trap += bar - height[i];
-  
 }
-cout << "trap : " << trap << endl;
+
     return 0;
 }
