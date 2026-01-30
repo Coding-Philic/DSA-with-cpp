@@ -1,33 +1,27 @@
 #include <iostream>
 using namespace std;
 
-
-int main (){
-int arr[4][4] = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-
-int srow = 0;
-int scol = 0;
-int erow = 4-1;
-int ecol = 4-1;
-while((srow<=erow) && (scol < ecol)){
-    for(int i = scol; i <= ecol; i++){
-        cout << arr[srow][i] << " ";
+int disum(int mat[3][3], int n){
+    int sum = 0;
+for(int i = 0; i < n; i++){
+    for(int j = 0; j < n; j++){
+        if(i == j){
+            sum += mat[i][j];
+        }
+        if(i+j == n-1){
+            if(i != j){
+                
+                sum += mat[i][j];
+            }
+        }
     }
-    for(int j = srow+1; j <= erow; j++){
-        cout << arr[j][ecol] << " " ;
-    }
-    for(int i = ecol-1; i > scol; i--){
-        cout << arr[erow][i] << " ";
-    }
-    for(int j = erow-1; j>srow+1; j--){
-        cout << arr[j][ecol] << " ";
-    }
-    srow++;
-    scol++;
-    erow--;
-    ecol--;
-    
+}
+return sum;
 }
 
+int main(){
+    int mat[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int sum = disum(mat, 3);
+    cout << sum << endl;
     return 0;
 }
