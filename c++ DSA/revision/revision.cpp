@@ -1,27 +1,29 @@
 #include <iostream>
 using namespace std;
 
-int disum(int mat[3][3], int n){
-    int sum = 0;
-for(int i = 0; i < n; i++){
-    for(int j = 0; j < n; j++){
-        if(i == j){
-            sum += mat[i][j];
+int search(int mat[3][3], int n, int key){
+    int r = 0;
+    int c = n-1;
+    while(r<n && c >=0 ){
+        int cell = mat[r][c];
+        if(cell == key){
+            cout << "row : " << r << endl << "col : " << c << endl;
+            return 1;
+        }else if(cell>key){
+            c--;
+            
+        }else{
+            r++;
         }
-        if(i+j == n-1){
-            if(i != j){
-                
-                sum += mat[i][j];
-            }
-        }
+        
     }
-}
-return sum;
+    return -1;
 }
 
 int main(){
-    int mat[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
-    int sum = disum(mat, 3);
-    cout << sum << endl;
+    int mat[3][3] = {{10,20,30},{15,25,35},{27,29,37}};
+    int res = search(mat, 3, 29);
+    cout << res << endl;
+
     return 0;
 }
